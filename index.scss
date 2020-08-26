@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", san-serif;
+  height: 100vh;
+  width: 100%;
+  #container {
+    padding: 20px;
+    margin: 0 auto;
+    min-height: 500px;
+    max-width: 1000px;
+    background: url("https://images.unsplash.com/photo-1551086144-2e1250996ba7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")
+      no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 0 rgba(24, 24, 24, 0.9);
+    .content {
+      width: 50%;
+      min-height: 50%;
+      margin: 0 auto;
+      background-color: rgba(39, 39, 39, 0.9);
+      padding: 30px;
+      h1 {
+        color: #d8d8d8;
+        font-size: 2em;
+      }
+      p {
+        color: #929292;
+        font-size: 1.1em;
+      }
+      button {
+        margin-top: 5px;
+        padding: 15px;
+        font-size: 0.9em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background: transparent;
+        border: 2px solid #d8d8d8;
+        color: #d8d8d8;
+        cursor: pointer;
+        transition: all 300ms ease-in;
+        &:hover {
+          box-shadow: inset 0 250px 0 #d8d8d8;
+          // background-color
+          color: rgba(39, 39, 39, 0.9);
+        }
+      }
+    }
+  }
+  #popup-window {
+    filter: none !important;
+    display: none;
+    position: absolute;
+    animation: move 300ms ease-in-out forwards;
+    justify-content: center;
+    width: 1000px;
+    .popup-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d8d8d8;
+      padding: 30px;
+      box-shadow: 3px 3px 0 rgba(159, 159, 159 , 0.9);
+      span {
+        margin-left: 30px;
+        font-size: 2em;
+        cursor: pointer;
+        transition: color 300ms ease-in;
+        &:hover {
+          color: #646464;
+        }
+      }
+    }
+  }
+  .blur-effect {
+    filter: blur(2px);
+  }
+}
+
+@keyframes move {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 250px;
+    opacity: 1;
+  }
+}
